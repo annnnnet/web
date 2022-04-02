@@ -1,0 +1,81 @@
+@import '../css/colors.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.usercard{
+    margin: 10px;
+    padding-top: 10px;
+}
+.tr{
+    margin-bottom: 20px;
+}
+.form-control {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px auto;
+  display: block;
+  width: 100%;
+  height: calc(45px);
+  padding: 0 10px;
+  border: 1px solid $shadow;
+  border-radius: 8px;
+  &::placeholder{
+    color: rgba(0, 0, 0, 0.226);
+}
+}
+
+.form-group {
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: $cream;
+    border-radius: 25px;
+    font-size: 18px;
+    color: $black;
+    border-color: $cream;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        color: $yellow;
+        transition: .2s;
+    }
+}
+
+.logout{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: $cream2;
+    border-radius: 25px;
+    font-size: 18px;
+    color: $black;
+    border-color: $cream2;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        color: $yellow;
+        transition: .2s;
+    }
+}
+.btn{
+    padding-top: 15px;
+}
+
+p {
+  color: $red;
+  margin-top: 20px;
+  display: none;
+}
