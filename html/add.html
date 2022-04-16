@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Add Stuff</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href='../css/index.css' />
+		<link rel="stylesheet" href='../css/user.css' />
+        <link rel="stylesheet" href='../css/add.css' />
+		
+		<div class="sidebar">
+
+			<div class="sidebar-logo">
+				<div class="logo">
+					<!-- <img src="../pics/images.png" alt="picture"> -->
+				</div>
+			</div>
+			
+			<nav class="sidebar-nav">
+				<h2 class="nav-title">Explore</h2>
+				<ul class="nav-list">
+					<li><a href="#"><img src="../pics/image 15.png" alt="light">New in </a></li>
+					<li><a href="#"><img src="../pics/image 15.png" alt="light">Available </a></li>
+					<li><a href="#"><img src="../pics/image 15.png" alt="light">Sold </a></li>
+					<li><a href="#"><img src="../pics/image 15.png" alt="light">Waiting </a></li>
+					
+				</ul>				
+				
+			</nav>
+
+			<div class="sidebar-help">
+				<a class="help" href="#">
+					<img class="help-icon" src="../pics/search.svg" alt="searchPic">
+					Need help?
+				</a>
+			</div>
+			
+		</div>	
+		<main class="main">
+			<header class="header">
+				
+				<div class="header-search">
+					<form class = "search">
+						<label class="search-label">
+							<img class="search-icon"src="../pics/search.svg" alt="loook">
+							<input class="search-input" type="text" placeholder="Search store">
+						</label>
+					</form>
+				</div>
+				
+				<div class="header-links">
+					<nav class="nav-header">
+						<ul class="nav-header-list">
+							<li class="nav-header-link-text"><a href="index.html">products</a></li>
+							<li class="nav-header-link-text"><a href="#">not products</a></li>
+							<li class="nav-header-link-text"><a href="#">something</a></li>
+							<li class="nav-header-icon">
+								<a href="cart.html"><img src="../pics/basket.svg" alt="basketImg"></a>
+							</li>
+							<li class="nav-header-icon">
+								<a href="#"><img src="../pics/person.svg" alt="profile"></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+            <div class="usercard">
+                <h2 class="tr">Add product</h2>
+                <form id="form" method="post">
+                    <div class="form-group">
+                        <label>Name</label>
+                            <label class="">
+                                <input class="form-control" id="name" type="text" placeholder="qwerty123">
+                            </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                            <label class="">
+                                <input class="form-control" id="status" type="text" placeholder="Mary">
+                            </label>
+                    </div>
+                    <input type="submit" value="Submit" />
+                </form>
+                <div id="result"></div>
+              </div>
+		</main>
+	</body>
+    <script src="../js/script.js"></script>
+</html>
