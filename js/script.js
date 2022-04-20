@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 const available = document.getElementById('available');
 const availableBtn = document.getElementById('availableBtn');
 
@@ -20,8 +21,7 @@ if (form) {
             ),
         })
             .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
+            .then(() => {
                 const result = document.getElementById('result');
                 result.innerHTML = '<h5>Successfully added</h5>';
             });
@@ -47,18 +47,22 @@ function getAvailable() {
             });
         });
 }
+if (availableBtn) {
+    availableBtn.addEventListener('click', getAvailable);
+}
 
-available.addEventListener('click', (e) => {
-    e.preventDefault();
-    const delBtn = e.target.id === 'delete-stuff';
-    const { id } = e.target.parentElement.dataset;
-    if (delBtn) {
-        fetch(`http://127.0.0.1:5000/commodity/${id}`, {
-            method: 'DELETE',
-        })
-            .then((res) => res.json())
-            // eslint-disable-next-line no-restricted-globals
-            .then(() => location.reload());
-    }
-});
-availableBtn.addEventListener('click', getAvailable);
+if (available) {
+    available.addEventListener('click', (e) => {
+        e.preventDefault();
+        const delBtn = e.target.id === 'delete-stuff';
+        const { id } = e.target.parentElement.dataset;
+        if (delBtn) {
+            fetch(`http://127.0.0.1:5000/commodity/${id}`, {
+                method: 'DELETE',
+            })
+                .then((res) => res.json())
+                // eslint-disable-next-line no-restricted-globals
+                .then(() => location.reload());
+        }
+    });
+}
